@@ -1,111 +1,63 @@
 # 🎧 Model Card: Music Recommender Simulation
 
-## 1. Model Name  
+## 1. Model Name
 
-Give your model a short, descriptive name.  
-Example: **VibeFinder 1.0**  
-
----
-
-## 2. Intended Use  
-
-Describe what your recommender is designed to do and who it is for. 
-
-Prompts:  
-
-- What kind of recommendations does it generate  
-- What assumptions does it make about the user  
-- Is this for real users or classroom exploration  
+**SoundMatch 1.0**
 
 ---
 
-## 3. How the Model Works  
+## 2. Intended Use
 
-Explain your scoring approach in simple language.  
-
-Prompts:  
-
-- What features of each song are used (genre, energy, mood, etc.)  
-- What user preferences are considered  
-- How does the model turn those into a score  
-- What changes did you make from the starter logic  
-
-Avoid code here. Pretend you are explaining the idea to a friend who does not program.
+Suggests songs based on a user's favorite genre, mood, and energy level. Built for a classroom simulation — not for real users. Assumes the user can be described by just three preferences, which is obviously a simplification.
 
 ---
 
-## 4. Data  
+## 3. How the Model Works
 
-Describe the dataset the model uses.  
+Every song in the catalog gets a score. A genre match adds the most points, then mood, then how close the song's energy is to what the user wants. Valence (how positive a song feels) adds a small bonus. Songs are ranked by score and the top 5 are returned with a short reason explaining what matched.
 
-Prompts:  
-
-- How many songs are in the catalog  
-- What genres or moods are represented  
-- Did you add or remove data  
-- Are there parts of musical taste missing in the dataset  
+No machine learning. Just weighted math.
 
 ---
 
-## 5. Strengths  
+## 4. Data
 
-Where does your system seem to work well  
-
-Prompts:  
-
-- User types for which it gives reasonable results  
-- Any patterns you think your scoring captures correctly  
-- Cases where the recommendations matched your intuition  
+20 songs in a CSV file. Genres include pop, lofi, rock, synthwave, jazz, ambient, indie pop, r&b, and country. Moods include happy, chill, intense, relaxed, moody, and focused. Pop and lofi are overrepresented. No hip-hop, classical, metal, or anything non-Western. Added 10 songs to the original 10 to get more variety.
 
 ---
 
-## 6. Limitations and Bias 
+## 5. Strengths
 
-Where the system struggles or behaves unfairly. 
-
-Prompts:  
-
-- Features it does not consider  
-- Genres or moods that are underrepresented  
-- Cases where the system overfits to one preference  
-- Ways the scoring might unintentionally favor some users  
+- Works well when the user's genre is in the catalog — top results feel genuinely relevant
+- The explanation strings ("genre match, mood match") make it easy to understand why something was recommended
+- Energy similarity does a decent job of separating chill songs from hype songs even across genres
 
 ---
 
-## 7. Evaluation  
+## 6. Limitations and Bias
 
-How you checked whether the recommender behaved as expected. 
-
-Prompts:  
-
-- Which user profiles you tested  
-- What you looked for in the recommendations  
-- What surprised you  
-- Any simple tests or comparisons you ran  
-
-No need for numeric metrics unless you created some.
+- Genre weight is too strong — a genre match almost always wins regardless of everything else
+- Exact string matching means "indie pop" and "pop" are treated as completely different
+- Small dataset means the same artists keep showing up
+- High-energy songs bleed into profiles they don't belong in
+- No consideration of tempo, danceability, or acousticness in the scoring
 
 ---
 
-## 8. Future Work  
+## 7. Evaluation
 
-Ideas for how you would improve the model next.  
-
-Prompts:  
-
-- Additional features or preferences  
-- Better ways to explain recommendations  
-- Improving diversity among the top results  
-- Handling more complex user tastes  
+Tested three profiles: Happy Pop Fan, Chill Lofi Listener, High-Energy Rock Head. Top 2 results for each profile made sense. Gym Hero showed up for both pop and rock users because of its high energy — that was unexpected. Temporarily removing the mood check shuffled the rankings a lot, which confirmed mood is the second most important signal after genre.
 
 ---
 
-## 9. Personal Reflection  
+## 8. Future Work
 
-A few sentences about your experience.  
+- Fuzzy genre matching so "indie pop" partially counts as "pop"
+- Diversity penalty to stop the same artist appearing multiple times
+- Add user feedback — if a song gets skipped, lower the weight of whatever signal matched it
 
-Prompts:  
+---
 
-- What you learned about recommender systems  
-- Something unexpected or interesting you discovered  
-- How this changed the way you think about music recommendation apps  
+## 9. Personal Reflection
+
+Learned that recommendation systems are basically just ranked math with opinions baked into the weights. The surprising part was how "smart" it feels even though it's just addition. Also made me realize how much Spotify probably knows about me if this toy version can already narrow things down with three inputs.
