@@ -1,21 +1,21 @@
-id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
-1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18
-2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71
-3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10
-4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86
-5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05
-6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92
-7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89
-8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
-9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
-10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
-11,Thunder Anthem,Voltline,rock,intense,0.95,160,0.45,0.70,0.08
-12,Velvet Nights,Luna Shade,r&b,moody,0.60,95,0.66,0.75,0.30
-13,Desert Wind,Cactus Tone,country,relaxed,0.50,104,0.73,0.65,0.80
-14,Neon Jungle,Synthex,synthwave,intense,0.88,140,0.55,0.85,0.05
-15,Sunday Morning,Paper Lanterns,indie pop,happy,0.55,100,0.88,0.70,0.60
-16,Deep Blue,Orbit Bloom,ambient,chill,0.22,55,0.50,0.35,0.95
-17,Breakaway,Max Pulse,pop,happy,0.78,126,0.90,0.85,0.10
-18,Rainy Cafe,Slow Stereo,jazz,relaxed,0.33,85,0.68,0.50,0.91
-19,Electric Dreams,Synthex,synthwave,happy,0.80,135,0.78,0.82,0.08
-20,Mountain Echo,Cactus Tone,country,chill,0.38,96,0.72,0.55,0.88
+id,title,artist,genre,mood,mood_tag,energy,tempo_bpm,valence,danceability,acousticness,popularity,decade
+1,Sunrise City,Neon Echo,pop,happy,euphoric,0.82,118,0.84,0.79,0.18,87,2020s
+2,Midnight Coding,LoRoom,lofi,chill,nostalgic,0.42,78,0.56,0.62,0.71,74,2020s
+3,Storm Runner,Voltline,rock,intense,aggressive,0.91,152,0.48,0.66,0.10,81,2010s
+4,Library Rain,Paper Lanterns,lofi,chill,nostalgic,0.35,72,0.60,0.58,0.86,69,2020s
+5,Gym Hero,Max Pulse,pop,intense,aggressive,0.93,132,0.77,0.88,0.05,92,2020s
+6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,dreamy,0.28,60,0.65,0.41,0.92,61,2010s
+7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,nostalgic,0.37,90,0.71,0.54,0.89,58,2010s
+8,Night Drive Loop,Neon Echo,synthwave,moody,dreamy,0.75,110,0.49,0.73,0.22,77,2020s
+9,Focus Flow,LoRoom,lofi,focused,melancholic,0.40,80,0.59,0.60,0.78,71,2020s
+10,Rooftop Lights,Indigo Parade,indie pop,happy,euphoric,0.76,124,0.81,0.82,0.35,83,2020s
+11,Thunder Anthem,Voltline,rock,intense,aggressive,0.95,160,0.45,0.70,0.08,78,2010s
+12,Velvet Nights,Luna Shade,r&b,moody,melancholic,0.60,95,0.66,0.75,0.30,85,2020s
+13,Desert Wind,Cactus Tone,country,relaxed,nostalgic,0.50,104,0.73,0.65,0.80,64,2010s
+14,Neon Jungle,Synthex,synthwave,intense,aggressive,0.88,140,0.55,0.85,0.05,79,2020s
+15,Sunday Morning,Paper Lanterns,indie pop,happy,euphoric,0.55,100,0.88,0.70,0.60,80,2020s
+16,Deep Blue,Orbit Bloom,ambient,chill,dreamy,0.22,55,0.50,0.35,0.95,55,2010s
+17,Breakaway,Max Pulse,pop,happy,euphoric,0.78,126,0.90,0.85,0.10,90,2020s
+18,Rainy Cafe,Slow Stereo,jazz,relaxed,nostalgic,0.33,85,0.68,0.50,0.91,60,2000s
+19,Electric Dreams,Synthex,synthwave,happy,euphoric,0.80,135,0.78,0.82,0.08,76,2020s
+20,Mountain Echo,Cactus Tone,country,chill,nostalgic,0.38,96,0.72,0.55,0.88,62,2010s
